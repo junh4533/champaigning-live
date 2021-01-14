@@ -1,0 +1,17 @@
+{
+  "name": "champaigning-live",
+  "version": "1.0.0",
+  "description": "A WordPress theme for Champaigning Live",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --output-style compressed --include-path scss assets/sass/main.scss style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7"
+  }
+}

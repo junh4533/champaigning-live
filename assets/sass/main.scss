@@ -1,0 +1,31 @@
+/*
+Theme Name: Champaigning Live
+Theme URI: https://github.com/tidythemes/blankslate
+Author: Jun Huang
+Author URI: http://junh4533.github.io
+Description: A custom WordPress Theme for Champaigning Live
+Version: 2021.1
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: 
+Text Domain: champaigninglive
+*/
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+@import "variables";
+@import "mixins";
+
+// components
+@import "button";
+
+// template parts
+@import "header";
+@import "footer";
+
+// pages
+@import "front-page";
