@@ -11,12 +11,6 @@ Tags:
 Text Domain: champaigninglive
 */
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
 @import "variables";
 @import "mixins";
 
@@ -29,3 +23,75 @@ body {
 
 // pages
 @import "front-page";
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: $primary-bg;
+  color: $primary-font;
+  background: rgb(0, 0, 0);
+  // background: linear-gradient(
+  //   45deg,
+  //   rgba(0, 0, 0, 1) 5%,
+  //   rgba(0, 0, 0, 1) 17%,
+  //   rgba(28, 21, 2, 1) 35%,
+  //   rgba(0, 0, 0, 1) 67%,
+  //   rgba(0, 0, 0, 1) 85%
+  // );
+  // background: linear-gradient(
+  //   45deg,
+  //   rgba(0, 0, 0, 1) 7%,
+  //   rgba(0, 0, 0, 1) 20%,
+  //   rgba(11, 8, 0, 1) 33%,
+  //   rgba(11, 8, 0, 1) 67%,
+  //   rgba(0, 0, 0, 1) 84%,
+  //   rgba(0, 0, 0, 1) 96%
+  // );
+  // background: linear-gradient(
+  //   45deg,
+  //   rgba(0, 0, 0, 1) 7%,
+  //   rgba(0, 0, 0, 1) 20%,
+  //   rgba(11, 8, 0, 1) 31%,
+  //   rgba(11, 8, 0, 1) 57%,
+  //   rgba(0, 0, 0, 1) 73%,
+  //   rgba(0, 0, 0, 1) 96%
+  // );
+  // background: rgb(45, 32, 2);
+  // background: radial-gradient(
+  //   circle,
+  //   rgba(45, 32, 2, 1) 4%,
+  //   rgba(0, 0, 0, 1) 100%
+  // );
+  // background: rgb(45, 32, 2);
+  // background: radial-gradient(
+  //   circle,
+  //   rgba(45, 32, 2, 1) 5%,
+  //   rgba(34, 24, 1, 1) 24%,
+  //   rgba(22, 15, 0, 1) 46%,
+  //   rgba(14, 10, 0, 1) 68%,
+  //   rgba(0, 0, 0, 1) 100%
+  // );
+  // background: rgb(83, 60, 8);
+  // background: radial-gradient(
+  //   circle,
+  //   rgba(83, 60, 8, 1) 5%,
+  //   rgba(74, 54, 7, 1) 13%,
+  //   rgba(54, 39, 5, 1) 22%,
+  //   rgba(23, 16, 1, 1) 59%,
+  //   rgba(0, 0, 0, 1) 100%
+  // );
+}
+
+.hv-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tint {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
