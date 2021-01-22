@@ -27,3 +27,36 @@ function load_scripts()
 add_theme_support( 'post-thumbnails' );
 add_action('wp_enqueue_scripts', 'load_stylesheets');
 add_action('wp_enqueue_scripts', 'load_scripts');
+
+
+// Our custom post type function
+function create_posttype() {
+ 
+    register_post_type( 'champaigners',
+        array(
+		'label'               => __( 'Champaigners'),
+		'description'         => __( 'Champaigners'),
+        'labels' => array(
+                'name' => __( 'Champaigners' ),
+                'singular_name' => __( 'Champaigner' )
+         ),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields'),
+		'public'              => true,
+		'hierarchical'        => false,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'has_archive'         => true,
+		'can_export'          => true,
+		'exclude_from_search' => false,
+	        'yarpp_support'       => true,
+		'taxonomies' 	      => array('post_tag','category'),
+		'publicly_queryable'  => true,
+		'rewrite' => array('slug' => 'champaigners'),
+        'show_in_rest' => true,
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );

@@ -1,13 +1,14 @@
 <?php get_header() ?>
 <?php
         $featured_content_query = new WP_Query( array(
-     'category_name' => 'champaigner',
+     'post_type' => 'champaigners',
      'meta_key'		=> 'is_featured',
-	'meta_value'	=> true
+    'meta_value'	=> true,
    )); 
 
     $champaigners_query = new WP_Query( array(
-     'category_name' => 'champaigner',
+     'post_type' => 'champaigners',
+     'posts_per_page' => 8,
    )); 
 
    ?>
@@ -54,7 +55,7 @@
             $thumbnail_alt = get_field( "thumbnail")['url'];
             $tags = get_field( "tags");
         ?>
-                <div class="col-6 col-md-4 col-lg-3 py-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-3">
                     <a class="champaigners-thumbnail-link" href=" <?php echo the_permalink(); ?>" target="_blank">
                         <img class="champaigners-thumbnail" src="<?php echo $thumbnail_url; ?>"
                             alt="<?php echo $thumbnail_alt; ?>">
